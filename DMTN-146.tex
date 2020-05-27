@@ -3,14 +3,22 @@
 \input{meta}
 
 % Package imports go here.
+\usepackage{hyperref}
+
 
 % Local commands go here.
+\newcommand{\cvd}{COVID-19\,}
+\newcommand{\qa}{Q\&A\,}
+\newcommand{\raw}{Rubin Algorithms Workshop\,}
+\newcommand{\rubin}{Rubin Observatory\,}
+\setcounter{secnumdepth}{2}
+
 
 %If you want glossaries
 %\input{aglossary.tex}
 %\makeglossaries
 
-\title{Virtual Rubin Algorithms Workshop}
+\title[Virtual Rubin Algorithms Workshop]{Virtual Rubin Algorithms Workshop.}
 
 % Optional subtitle
 % \setDocSubtitle{A subtitle}
@@ -28,7 +36,11 @@ Leanne Guy
 % \setDocCurator{The Curator of this Document}
 
 \setDocAbstract{%
-The Rubin Observatory Project hosted a workshop on the topic of image processing and algorithms for the Rubin Observatory Legacy Survey of Space and Time (LSST). Two weeks prior to the meeting start, the workshop was converted to an all-virtual workshop. This is a report on how that virtual workshop was run. 
+% \footnote{\url{https://ls.st/law}\label{law}}
+In March 2020, Rubin Observatory hosted a workshop on the topic of image processing algorithms for the Legacy Survey of Space and Time (LSST). (\cite{RAW2020}). 
+The workshop was originally planned as an in-person event of about 80 people at Princeton University. 
+Two weeks prior to the planned start date, in light of the uncertainty around the evolving coronavirus disease 2019 (\cvd), and with the health and safety of all attendees first and foremost in mind, the SOC took the decision to convert the workshop to an all-virtual format. 
+This technical note describes how we modified and ran that all-virtual workshop, and  provides advice on how to organize similar such  online workshops, meetings and conferences.
 }
 
 % Change history defined here.
@@ -36,7 +48,7 @@ The Rubin Observatory Project hosted a workshop on the topic of image processing
 % Fields: VERSION, DATE, DESCRIPTION, OWNER NAME.
 % See LPM-51 for version number policy.
 \setDocChangeRecord{%
-  \addtohist{1}{YYYY-MM-DD}{Unreleased.}{Leanne Guy}
+  \addtohist{1}{2020-03-24}{First draft.}{Leanne Guy}
 }
 
 
@@ -46,24 +58,101 @@ The Rubin Observatory Project hosted a workshop on the topic of image processing
 \maketitle
 % Frequently for a technote we do not want a title page  uncomment this to remove the title page and changelog.
 % use \mkshorttitle to remove the extra pages
+% \mkshorttitle 
 
 % ADD CONTENT HERE
 % You can also use the \input command to include several content files.
 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{Introduction} 
+
+In March 2020, Rubin Observatory planned to host a workshop on the topic of image processing algorithms for the Legacy Survey of Space and Time (LSST) (\cite{RAW2020}) for about 80 people at Princeton University.  
+Given the increasing health risks and anxiety associated with the outbreak of the coronavirus disease 2019 (\cvd) at the time, the SOC felt strongly that the only responsible course of action was to not hold a primarily in-person based workshop. 
+Rather than canceling or postponing the event, the workshop was converted to an all-virtual format. Holding a virtual online workshop rather than cancelling allowed us to still achieve many of the goals of the  original in-person workshop.
+
+%%%%%%%%% The workshop format 	 %%%%%%%%%%%%%%%%%%%%%%%%
+\section{Workshop format} 
+One of the biggest challenge for any all-virtual meeting is accommodating the many time-zones across which participants are located.
+\raw participants were located across all US time zones, Europe, Australia and Asia. 
+The need to accommodate many time zones was the strongest factor in redesigning the workshop for an all-virtual format. 
+We choose a daily format of three sessions, each 1.5 hours in duration, each punctuated by 30 minute breaks.  
+The workshop ran for three days with a daily schedule ran from 9:00 - 14:30 PDT, a total of 5.5 hours.
+To achieve this reduced format, unconference sessions, long lunch breaks and participant introductions planned as part of the in-person event were removed. \rubin plans to hold follow up virtual discussion sessions with the community to replace the lost unconference sessions. 
+
+ Figure~\ref{fig:agenda} shows how the agenda covered many time zones.
+\begin{figure}
+\centering
+\includegraphics[angle=270, width=0.9\textwidth]{images/raw-agenda.pdf}
+\caption{Rubin Algorithms Workshop agenda spanning several timezones}
+\label{fig:agenda}
+\end{figure}
+
+
+Participants reported that this format worked well and showed support for the shortened day format to enable it to be tolerable in all US and European time zones. The the online nature actually helped to channel my focus into the talks more than some real-world meetings.
+Feedback also confirmed that 30 mins is the minimum time that should be allocated for breaks. 
+Any shorter is not enough time to achieve anything useful. 
+If possible, 45 min breaks would be good. 
+
+\section{Workshop Infrastructure} 
+A combination of several online collaboration tools were used to make this workshop a success.
+
+\paragraph{Zoom}
+Zoom was chosen as the platform for the virtual workshop. 
+Some of the key features that made Zoom an attractive choice for this workshop over other platforms were the 'raise hand' feature, ability to mute all participants, and the moderation and co-chair facilities.
+We used the Zoom hands up functionality but did not use Zoom chat for questions and discussion, preferring instead to use the slack platform. 
+
+\paragraph{Slack}
+
+
+\paragraph{Google drive}
+Google drive was used to share documents with all the workshop participants both in advance of and during the workshop.  
+"Participants Shared Drive"  to share essential information with all participants in one place. 
+This included all the presentations and any supporting information, the Zoom connection details, the agenda and the documents for taking live notes. 
+
+The live notes were set up in advance and all participants were invited to contribute.  
+One designated note taker from the organizing side was assigned to ensure notes are take. 
+
+\paragraph{Website}
+The \raw website, \footnote{\url{https://ls.st/law}\label{law}} was used for registration, to convey  organizational information, especially ongoing updates related to the \cvd situation and to serve the archived presentations and recordings and recordings to the public after the event. It was provided by the Rubin communications team. 
+
+
+%%%% Running the workshop 
+\section{Before the workshop}
+
+
+\section{During the workshop}
+
+For such a large meeting it is essential to have more than one moderator and to share the moderation task between the moderators 
+
+\paragraph{Managing Q and A}
+
+\paragraph{Controlling the flow}
+
+
+\section{Community Feedback}
+A feedback survey was sent out to all participants following the workshop to solicit feedback on what did and did not work.  
+
+Advice received has been incorporated into this technote.  
+Specific feedback was sought on how well the virtual experience worked and ways to improve the workshop, both from the technology standpoint and the tools, meeting procedures and processes. 
+
+\section{Conclusions}
+In light of the rapidly evolving \cvd situation at the the time of this workshop, the difficult decision in an atmosphere of uncertainty to move the \raw to a all-virtual format proved to be correct. 
+
+\section{Acknowledgements}
+I would like to thank, Rubin Observatory communications team for their help with the website and support in converting this workshop to an all-virtual format at short notice,  NOIRLab IT for technical support and for being on call during the workshop in the event of any network problems, SLAC for the use of their Zoom system, and Arjun Dey, NOIRLab and Richard Dubois, SLAC for their advice on running an all-virtual meeting.
+
 \appendix
 % Include all the relevant bib files.
 % https://lsst-texmf.lsst.io/lsstdoc.html#bibliographies
-\section{References} \label{sec:bib}
+\section{References} 
+\label{sec:bib}
 \bibliography{local,lsst,lsst-dm,refs_ads,refs,books}
 
 % Make sure lsst-texmf/bin/generateAcronyms.py is in your path
 \section{Acronyms} \label{sec:acronyms}
 \input{acronyms.tex}
 % If you want glossary uncomment below -- comment out the two lines above
-%\printglossaries
-
-
-
+\printglossaries
 
 
 \end{document}
